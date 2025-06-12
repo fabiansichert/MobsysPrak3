@@ -1,4 +1,4 @@
-package de.hsas.inf.mobsys.praktikumsaufgabe_2;
+package de.hsas.inf.mobsys.praktikumsaufgabe_3;
 
 import android.content.Context;
 

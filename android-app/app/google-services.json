@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "203074188712",
+    "project_id": "mobsysprak3-8c0f9",
+    "storage_bucket": "mobsysprak3-8c0f9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203074188712:android:98ef88c78d4ee8ad77999d",
+        "android_client_info": {
+          "package_name": "de.hsas.inf.mobsys.praktikumsaufgabe_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu5wdxQH7rmqyF04CGsjY1LHqmB-1--og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203074188712:android:02db48ebcb15414877999d",
+        "android_client_info": {
+          "package_name": "de.hsas.inf.mobsys.praktikumsaufgabe_3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu5wdxQH7rmqyF04CGsjY1LHqmB-1--og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package de.hsas.inf.mobsys.praktikumsaufgabe_2;
+package de.hsas.inf.mobsys.praktikumsaufgabe_3;
 
 import org.junit.Test;
 
@@ -13,5 +13,14 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+    }
+
+    @Test
+    public void testLoginInput() {
+        String email = "fabian@test.de";
+        String password = "test123";
+
+        assertTrue(email.contains("@"));
+        assertTrue(password.length() >= 6);
     }
 }
