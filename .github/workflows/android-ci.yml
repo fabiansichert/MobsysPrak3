@@ -1,12 +1,17 @@
-name: Release APK
+name: Android CI
 
 on:
   push:
-    tags:
-      - 'v*.*.*'
+    branches:
+      - develop
+      - test
+  pull_request:
+    branches:
+      - develop
+      - test
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,17 +36,8 @@ jobs:
       run: chmod +x ./gradlew
       working-directory: android-app
 
-    - name: Build APK
-      run: ./gradlew assembleDebug
+    - name: Build and run tests
+      run: ./gradlew testDebugUnitTest
       working-directory: android-app
-
-    - name: Upload Release APK
-      uses: softprops/action-gh-release@v2
-      with:
-        files: android-app/app/build/outputs/apk/debug/app-debug.apk
-        # draft: true   # Optional: nur Entwurf
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
 
