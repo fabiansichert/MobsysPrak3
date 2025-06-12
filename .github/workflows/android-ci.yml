@@ -32,6 +32,12 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
 
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+      working-directory: android-app
+
     - name: Build and run tests
       run: ./gradlew testDebugUnitTest
+      working-directory: android-app
+
 
