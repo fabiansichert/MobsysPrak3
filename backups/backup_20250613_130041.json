@@ -1,0 +1,24 @@
+{
+  "chats": [
+    {
+      "sender": "bine@test.de",
+      "timestamp": "2025-06-11T14:11:01.713000+00:00",
+      "text": "Ich will eine Website kaufen!"
+    },
+    {
+      "sender": "fabian@test.de",
+      "timestamp": "2025-06-11T14:10:17.874000+00:00",
+      "text": "Hallo!"
+    },
+    {
+      "sender": "bine@test.de",
+      "timestamp": "2025-06-11T14:10:45.072000+00:00",
+      "text": "Wie ghets?"
+    },
+    {
+      "sender": "fabian@websich.de",
+      "timestamp": "2025-06-11T14:11:49.979000+00:00",
+      "text": "Dann kauf Sie bei mir!"
+    }
+  ]
+}
