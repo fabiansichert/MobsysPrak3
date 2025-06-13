@@ -8,7 +8,7 @@ from firebase_admin import credentials, firestore, auth
 import time
 app_start_time = time.time()
 
-app = Flask(__name__)  # Das zentrale app-Objekt
+app = Flask(__name__)
 
 if not firebase_admin._apps:
     cred = credentials.Certificate("mobsysprak3-8c0f9-firebase-adminsdk-fbsvc-347a88a270.json")
@@ -31,7 +31,6 @@ def get_messages():
 
 @app.route("/monitoring")
 def monitoring():
-    # Anzahl User (Firebase Authentication)
     try:
         user_list = []
         page = auth.list_users()
@@ -42,14 +41,12 @@ def monitoring():
     except Exception as e:
         user_count = f"Fehler: {e}"
 
-    # Anzahl Dokumente in "chats/global/messages"
     try:
         messages_ref = db.collection("chats").document("global").collection("messages").stream()
         message_count = sum(1 for _ in messages_ref)
     except Exception as e:
         message_count = f"Fehler: {e}"
 
-    # Einfacher Status
     status = "OK" if user_count != 0 else "Keine User gefunden"
 
     return jsonify({
@@ -63,7 +60,6 @@ def monitoring():
 # Backupmanagement DB
 def convert_timestamp(doc_dict):
     for key, value in doc_dict.items():
-        # Prüfen, ob Wert ein Firestore Timestamp ist (DatetimeWithNanoseconds)
         if hasattr(value, "isoformat"):
             doc_dict[key] = value.isoformat()
     return doc_dict
@@ -74,7 +70,7 @@ def backup():
     messages = []
     for doc in messages_ref:
         data = doc.to_dict()
-        data = convert_timestamp(data)  # Timestamp konvertieren
+        data = convert_timestamp(data)
         messages.append(data)
 
     backup_data = {"chats": messages}
