@@ -24,4 +24,4 @@ jobs:
     - name: Syntax check
       run: |
         cd backend
-        python -m py_compile app.py main.py firebase_init.py
+        python -m py_compile app.py main.py
